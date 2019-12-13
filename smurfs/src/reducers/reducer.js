@@ -23,7 +23,7 @@ export const reducer = (state = initialState, action) => {
         case GET_SMURFS_SUCCESS:
             return { 
                 ...state, 
-                smurfs: action.payload.data, 
+                smurfs: action.payload, 
                 isFetching: false,
                 error: '' 
             };
@@ -31,7 +31,7 @@ export const reducer = (state = initialState, action) => {
         case CREATE_SMURF:
             return { 
                 ...state, 
-                smurfs: action.payload.data };
+                smurfs: action.payload };
 
         case ERROR:
             return {

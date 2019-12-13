@@ -8,6 +8,7 @@ const SmurfList = props => {
             props.getSmurf()
 
     }, [])
+    console.log(props)
     return (
         <div>
             <div>

@@ -12,9 +12,10 @@ const SmurfForm = props => {
 
   
   const handleSubmit = e => {
-    props.createSmurf(smurf);
     e.preventDefault();
-    console.log(` SMURF FORM `, smurf);
+    props.createSmurf(smurf);
+    
+
   };
 
   const handleChanges = (e) => {
@@ -52,4 +53,10 @@ const SmurfForm = props => {
     )
 }
 
-export default connect(null, { createSmurf }) (SmurfForm)
+const mapStateToProps = state => {
+    return {
+        smurfs:state.smurfs
+    }
+}
+
+export default connect(mapStateToProps, { createSmurf }) (SmurfForm)
