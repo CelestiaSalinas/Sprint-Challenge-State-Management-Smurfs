@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
+import SmurfForm from './SmurfForm'
+import SmurfList from './SmurfList'
+
+
 class App extends Component {
+//   constructor(props) {
+//     super(props);
+
+
+// componentDidMount() {
+//   this.props.getSmurfs()
+// }
+
   render() {
     return (
       <div className="App">
@@ -8,6 +20,8 @@ class App extends Component {
         <div>Welcome to your state management version of Smurfs!</div>
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
+        <SmurfForm handleChangeAge={this.handleChangeAge} handleChangeHeight={this.handleChangeHeight} handleChangeName={this.handleChangeName} />
+        <SmurfList />
       </div>
     );
   }
